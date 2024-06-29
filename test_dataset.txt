@@ -1,0 +1,692 @@
+accept:Accept a job to print
+access:Check access to files
+accton:Turn accounting on
+aclocal:Create aclocal.m4 by scanning configure.in
+aconnect:Connect and disconnect ALSA sequencer ports
+acpi:Show battery status
+acpi_available:Check if ACPI is available
+acpid:Advanced Configuration and Power Interface event daemon
+addr2line:Convert addresses into file names and line numbers
+addresses:Print addresses
+agetty:Alternative Linux getty
+alias:Create command alias
+alsactl:Control advanced sound settings
+amidi:Send and receive MIDI messages
+amixer:Adjust audio mixer
+anacron:Run commands periodically
+aplay:Play a sound file
+aplaymidi:Play MIDI files
+apm:Display battery status
+apmd:Advanced Power Management daemon
+apropos:Search for a command by description
+apt:Advanced package tool
+apt-get:APT package handling utility
+aptitude:Text-based interface for APT
+ar:Create, modify, and extract from archives
+arch:Print machine architecture
+arecord:Record audio
+arecordmidi:Record MIDI data
+arp:Manipulate the system ARP cache
+as:GNU assembler
+aspell:Spell checker
+at:Execute commands at a later time
+atd:Daemon to execute scheduled commands
+atq:List the user's pending jobs
+atrm:Remove jobs from the at queue
+audiosend:Send audio
+aumix:Adjust volume and mixer settings
+autoconf:Generate configuration scripts
+autoheader:Create a template header for configuration
+automake:Generate Makefile.in files
+autoreconf:Automatically reconfigure source files
+autoscan:Automatically create a configure.in file
+autoupdate:Update a configure.in file
+awk:Pattern scanning and processing language
+badblocks:Search for bad blocks on a disk
+banner:Print a banner
+basename:Strip directory and suffix from filenames
+bash:GNU Bourne Again SHell
+batch:Schedule commands to run at a later time
+bc:Arbitrary-precision calculator language
+bg:Place a job in the background
+biff:Enable or disable mail notification
+bind:Bind a name to a socket
+bison:GNU parser generator
+break:Exit from a loop
+builtin:Run a shell builtin
+bzcmp:Compare bzip2 compressed files
+bzdiff:Compare bzip2 compressed files
+bzgrep:Search bzip2 compressed files
+bzip2:Compress files with bzip2
+bzless:View bzip2 compressed files
+bzmore:View bzip2 compressed files
+cal:Display a calendar
+cardctl:Control PCMCIA sockets
+cardmgr:Manage PCMCIA sockets
+case:Execute commands based on conditions
+cat:Concatenate and display files
+cc:Invoke the C compiler
+ccrypt:Encrypt and decrypt files and streams
+cd:Change the current directory
+cdda2wav:Rip audio CDs
+cdparanoia:Rip audio CDs
+cdrdao:Write audio and data CDs
+cdrecord:Record audio and data CDs
+cfdisk:Partition a hard disk
+chage:Change user password expiry information
+chattr:Change file attributes on a Linux file system
+chdir:Change the current directory
+chfn:Change user information
+chgrp:Change group ownership
+chkconfig:Update and query runlevel information for system services
+chmod:Change file access permissions
+chown:Change file ownership
+chpasswd:Update passwords in batch mode
+chroot:Run a command with a different root directory
+chrt:Change real-time scheduling priority
+chsh:Change login shell
+chvt:Change foreground virtual terminal
+cksum:Print CRC checksum and byte counts
+clear:Clear the terminal screen
+cmp:Compare two files byte by byte
+col:Filter reverse line feeds from input
+colcrt:Filter nroff output for CRT previewing
+colrm:Remove columns from a file
+column:Format text into columns
+comm:Compare two sorted files line by line
+command:Run a command
+compress:Compress files
+continue:Resume the next iteration of a loop
+cp:Copy files and directories
+cpio:Copy files to and from archives
+cpp:The C Preprocessor
+cron:Daemon to execute scheduled commands
+crond:Daemon to execute scheduled commands
+crontab:Schedule a command to run at a later time
+csplit:Split a file into context-determined pieces
+ctags:Generate tag files for source code
+cupsd:Common UNIX Printing System scheduler
+curl:Transfer data from or to a server
+cut:Remove sections from each line of files
+cvs:Concurrent Versions System
+date:Print or set the system date and time
+dc:Desk calculator
+dd:Convert and copy a file
+ddrescue:Data recovery tool
+deallocvt:Deallocate unused virtual consoles
+debugfs:Debug the ext2/ext3/ext4 file systems
+declare:Declare variables and give them attributes
+depmod:Generate modules.dep and map files
+devdump:Dump a device's contents
+df:Report file system disk space usage
+diff:Compare files line by line
+diff3:Compare three files line by line
+dig:DNS lookup
+dir:List directory contents
+dircolors:Color setup for ls
+dirname:Strip last component from file name
+dirs:Display directory stack
+disable:Disable a shell builtin
+dlpsh:A shell for the Data Language Processing system
+dmesg:Print or control the kernel ring buffer
+dmidecode:Dump system's DMI table contents
+dnsdomainname:Show the system's DNS domain name
+dnssec-keygen:Generate DNSSEC key
+dnssec-makekeyset:Generate a DNSSEC key set
+dnssec-signkey:Sign DNSSEC key
+dnssec-signzone:Sign a DNS zone
+doexec:Execute commands
+domainname:Show or set the system's NIS/YP domain name
+dosfsck:Check and repair MS-DOS file systems
+dpkg:Debian package manager
+dstat:Versatile resource statistics
+du:Estimate file space usage
+dump:Backup file systems
+dumpe2fs:Dump ext2/ext3/ext4 file system information
+dumpkeys:Dump keyboard translation tables
+e2fsck:Check a Linux ext2/ext3/ext4 file system
+e2image:Save critical ext2/ext3/ext4 file system data
+e2label:Change the label on an ext2/ext3/ext4 file system
+echo:Display a line of text
+ed:Line-oriented text editor
+edquota:Edit user quotas
+egrep:Extended grep
+eject:Eject removable media
+elvtune:Tune I/O elevator parameters
+emacs:Edit text files with emacs
+enable:Enable a shell builtin
+env:Show environment variables
+envsubst:Substitute environment variables in strings
+esd:Enable EsounD sound daemon
+esd-config:Configure EsounD sound daemon
+esdcat:Send audio data to EsounD
+esdctl:Control EsounD sound daemon
+esddsp:Run a command with EsounD DSP
+esdmon:Monitor EsounD audio stream
+esdplay:Play audio through EsounD
+esdrec:Record audio from EsounD
+esdsample:Sample audio with EsounD
+etags:Generate tag file for emacs
+ethtool:Configure Ethernet device settings
+eval:Evaluate shell commands
+ex:Line editor mode of vi
+exec:Replace the shell with a command
+exit:Exit the shell
+expand:Convert tabs to spaces
+expect:Automate interactive applications
+export:Set environment variables
+expr:Evaluate expressions
+factor:Display prime factors of a number
+factor:Display prime factors of a number
+false:Do nothing, unsuccessfully
+fc:Fix command
+fc-cache:Build font information cache files
+fc-list:List available fonts
+fdformat:Low-level format a floppy disk
+fdisk:Partition table manipulator for Linux
+fetchmail:Fetch mail from a remote mail server
+fg:Bring job to the foreground
+fgconsole:Print the active virtual console
+fgrep:Print lines matching a pattern
+file:Determine file type
+find:Search for files in a directory hierarchy
+finger:Display user information
+fingerd:Remote user information server
+flex:Fast lexical analyzer generator
+fmt:Simple optimal text formatter
+fold:Wrap each input line to fit in specified width
+for:Execute commands for each member in a list
+formail:Mail reformatter
+format:Format disks or tapes
+free:Display amount of free and used memory in the system
+fsck:File system consistency check and repair
+ftp:File Transfer Protocol client
+ftpd:FTP server process
+function:Define shell function
+Fun:Run a command with the privileges of the caller
+fuser:Identify processes using files or sockets
+g++:GNU project C++ compiler
+gawk:Pattern scanning and processing language
+gcc:GNU project C and C++ compiler
+gdb:GNU project debugger
+getent:Get entries from administrative databases
+getkeycodes:Print kernel scancode-to-keycode mapping table
+getopts:Parse positional parameters
+gpasswd:Administer /etc/group and /etc/gshadow
+gpg:GNU Privacy Guard
+gpgsplit:Split an OpenPGP message into packets
+gpgv:Verify OpenPGP signature
+gpm:General Purpose Mouse interface
+gprof:Display call graph profile data
+grep:Print lines matching a pattern
+groff:Typeset or format documents
+groffer:Display groff files
+groupadd:Create a new group
+groupdel:Delete a group
+groupmod:Modify a group
+groups:Print group names a user is in
+grpck:Verify integrity of group files
+grpconv:Convert to shadow group
+gs:Ghostscript interpreter and previewer
+gunzip:Uncompress gzip files
+gzexe:Compress executable files
+gzip:Compress files
+halt:Stop the system
+hash:Remember or display program locations
+hdparm:Get/set hard disk parameters
+head:Output the first part of files
+help:Display help information about built-in commands
+hexdump:Display file contents in hexadecimal, decimal, octal, or ASCII
+history:Display or manipulate the history list
+host:DNS lookup utility
+hostid:Print the numeric identifier for the current host
+hostname:Show or set the system's hostname
+hostnamectl:Control the system hostname
+htdigest:Manage user files for digest authentication
+htop:Interactive process viewer
+hwclock:Read or set the hardware clock
+iconv:Convert text from one character encoding to another
+id:Print user and group information
+if:Conditionally execute commands
+ifconfig:Configure a network interface
+ifdown:Shut down a network interface
+iftop:Display bandwidth usage on an interface
+ifup:Bring a network interface up
+imapd:Internet Message Access Protocol server
+import:Capture an X server screen and save the image to a file
+inetd:Internet super-server daemon
+info:Read documentation in info format
+init:System and service manager
+insmod:Insert a module into the Linux kernel
+install:Copy files and set attributes
+iostat:Report CPU and I/O statistics
+iotop:Display I/O usage by processes or threads
+ip:Show/manipulate routing, devices, policy routing, and tunnels
+ipcrm:Remove IPC resources
+ipcs:Report IPC facilities status
+iptables:Administration tool for IPv4 packet filtering and NAT
+iptables-restore:Restore IP Tables
+iptables-save:Save IP Tables
+iwconfig:Configure wireless network interfaces
+isodump:Dump ISO-9660 file systems
+isoinfo:ISO-9660 CD-ROM image utility
+isosize:Determine the size of an ISO-9660 file system
+isovfy:Verify an ISO-9660 file system
+ispell:Interactive spell checker
+jobs:List active jobs
+join:Join lines of two files on a common field
+journalctl:Query the systemd journal
+kbd_mode:Report or set the keyboard mode
+kbdrate:Reset the keyboard repeat rate and delay time
+kill:Send a signal to a process
+killall:Kill processes by name
+killall5:Send a signal to all processes
+klogd:Control the kernel log daemon
+kudzu:Detect and configure new hardware
+last:Show a listing of last logged in users
+lastb:Show a listing of last logged in users (with bad logins)
+lastlog:Show the last login of all users
+ld:GNU linker
+ldconfig:Configure dynamic linker run-time bindings
+ldd:Print shared object dependencies
+less:View file contents interactively
+lesskey:Specify key bindings for less
+let:Evaluate arithmetic expressions
+lftp:Sophisticated file transfer program
+lftpget:Get a file using lftp
+link:Create a hard link to a file
+ln:Make links between files
+loadkeys:Load keyboard translation tables
+local:Create a local variable
+locale:Get locale-specific information
+locate:Find files by name
+lockfile:Create semaphore file(s)
+logger:Make entries in the system log
+login:Begin session on the system
+logname:Print the current login name
+logout:Exit a login shell
+logrotate:Rotates, compresses, and mails system logs
+look:Display lines beginning with a given string
+losetup:Set up and control loop devices
+lpadmin:Configure the printer or class queues provided by CUPS
+lpc:Line printer control program
+lpinfo:Display available devices or drivers known to CUPS
+lpmove:Move a job to a different printer queue
+lpq:Show printer queue status
+lpr:Submit a print job
+lprint:Print a file to a line printer
+lprintd:Daemon to print files to a line printer
+lprintq:Show the line printer queue
+lprm:Remove jobs from the print queue
+lpstat:Show status of CUPS printers
+ls:List directory contents
+lsattr:List file attributes on a Linux second extended file system
+lsblk:List information about block devices
+lshw:List hardware configuration
+lsmod:Show the status of modules in the Linux kernel
+lsof:List open files
+lspci:List all PCI devices
+lsusb:List all USB devices
+m4:Macro processor
+mail:Send or receive mail
+mailq:Print the mail queue
+mailstats:Display mail statistics
+mailto:Send mail
+make:GNU make utility to maintain groups of programs
+makedbm:Create or dump a database map
+makemap:Create database maps from flat text files
+man:An interface to the system reference manuals
+manpath:Determine search path for manual pages
+mattrib:Change MS-DOS file attribute flags
+mbadblocks:Locate bad blocks on an MS-DOS file system
+mcat:Dump raw disk images
+mcd:Change MS-DOS directory
+mcopy:Copy MS-DOS files to/from Unix
+md5sum:Compute and check MD5 message digest
+mdel:Delete an MS-DOS file
+mdeltree:Delete an MS-DOS directory tree
+mdir:Display an MS-DOS directory
+mdu:Display the space usage of an MS-DOS directory
+merge:Three-way file merge
+mesg:Control write access to your terminal
+metamail:Interpret and display MIME messages
+metasend:Send MIME messages
+mformat:Format an MS-DOS disk
+mimencode:Encode or decode binary files to/from ASCII
+minfo:Display information about an MS-DOS file system
+mkdir:Make directories
+mkdosfs:Create an MS-DOS file system
+mke2fs:Create an ext2/ext3/ext4 file system
+mkfifo:Make FIFOs (named pipes)
+mkfs:Build a Linux file system
+mkfs.ext3:Create an ext3 file system
+mkisofs:Create an ISO 9660 CD-ROM file system
+mklost+found:Create a lost+found directory
+mkmanifest:Create a list of file names
+mknod:Make block or character special files
+mkraid:Create RAID devices
+mkswap:Set up a Linux swap area
+mktemp:Create a temporary file or directory
+mlabel:Make an MS-DOS volume label
+mmd:Make an MS-DOS directory
+mmount:Mount an MS-DOS disk
+mmove:Move or rename an MS-DOS file or directory
+mmv:Move or rename files
+modinfo:Show information about a Linux Kernel module
+modprobe:Add and remove modules from the Linux Kernel
+more:View file contents interactively
+most:View file contents interactively
+mount:Mount a file system
+mountd:NFS mount daemon
+mpartition:Partition an MS-DOS disk
+mpstat:Report CPU statistics
+mpg123:Play audio files (MPEG layer 1, 2, and 3)
+mpg321:Play audio files (MPEG layer 1, 2, and 3)
+mrd:Remove an MS-DOS directory
+mren:Rename an existing MS-DOS file
+mshowfat:Display the FAT clusters associated with a file
+mt:Control magnetic tape drive operation
+mtools:Manipulate MS-DOS files
+mtoolstest:Tests and displays
+mtr:Network diagnostic tool
+mtype:Display the contents of an MS-DOS file
+mv:Move or rename files and directories
+mzip:Zip up files in MS-DOS format
+named:Internet domain name server
+namei:Follow a pathname until a terminal point is found
+nameif:Name a network interface based on MAC addresses
+nc:Network debugging and exploration tool
+netstat:Print network connections, routing tables, interface statistics
+newaliases:Sendmail command to rebuild alias database
+newgrp:Log in to a new group
+newusers:Update and create new users in batch mode
+nfsd:NFS server daemon
+nfsstat:Print NFS statistics
+nice:Run a command with modified scheduling priority
+nl:Number lines of files
+nm:List symbols from object files
+nohup:Run a command immune to hangups
+notify-send:Send desktop notifications
+nslookup:Query Internet name servers interactively
+nsupdate:Update DNS dynamically
+objcopy:Copy and translate object files
+objdump:Display information from object files
+od:Dump files in octal and other formats
+op:Operator access
+open:Open files and directories
+openvt:Start a program on a new virtual terminal
+passwd:Change user password
+paste:Merge lines of files
+patch:Apply a diff file to an original
+pathchk:Check file name portability
+perl:Practical Extraction and Report Language
+pgrep:Look up or signal processes based on name and other attributes
+pidof:Find the process ID of a running program
+ping:Send ICMP ECHO_REQUEST to network hosts
+pinky:Lightweight finger
+pkill:Look up or signal processes based on name and other attributes
+pmap:Report memory map of a process
+popd:Remove directories from stack
+portmap:Dynamically allocated ports for RPC services
+poweroff:Shut down the system
+pppd:Point-to-Point Protocol Daemon
+pr:Convert text files for printing
+praliases:Print mail alias database
+printcap:Printer capability database
+printenv:Print all or part of environment
+printf:Format and print data
+ps:Report a snapshot of current processes
+ptx:Produce a permuted index of file contents
+pushd:Save and then change the current directory
+pv:Monitor the progress of data through a pipe
+pwck:Verify integrity of password files
+pwconv:Convert password file to shadow file
+pwd:Print the name of the current working directory
+python:Run the Python interpreter
+quota:Display disk usage and limits
+quotacheck:Scan a file system for disk usage
+quotactl:Set disk quotas
+quotaoff:Disable file system quotas
+quotaon:Enable file system quotas
+quotastats:Display quota statistics
+raidstart:Start RAID arrays
+ram:Access a RAM disk device
+ramsize:Set RAM disk size
+ranlib:Generate index to the contents of an archive
+rar:Archive files with RAR
+rarpd:Reverse Address Resolution Protocol daemon
+rcp:Remote file copy
+rdate:Set the system date from a remote host
+rdev:Query/set the root device in the boot image
+rdist:Remote file distribution client
+rdistd:Remote file distribution server
+read:Read a line from standard input
+readarray:Read from standard input into an array variable
+readcd:Read or write CDs
+readelf:Display information about ELF files
+readlink:Display value of a symbolic link
+readonly:Mark variables/functions as readonly
+reboot:Reboot the system
+reject:Reject print jobs
+remsync:Synchronize remote directories
+rename:Rename files
+renice:Alter priority of running processes
+repquota:Report on disk usage for users/groups
+reset:Reset terminal settings
+resize2fs:Resize ext2/ext3/ext4 file systems
+restore:Restore files from backups made by dump
+return:Exit a function
+rev:Reverse lines of a file
+rexec:Remote execution client
+rexecd:Remote execution server
+richtext:Richtext file conversion tool
+rlogin:Remote login client
+rlogind:Remote login server
+rm:Remove files or directories
+rmail:Send or receive mail
+rmdir:Remove empty directories
+rmmod:Remove a module from the Linux kernel
+rndc:Name server control utility
+rootflags:Set root file system mount flags
+route:Show/manipulate the IP routing table
+routed:Internet routing daemon
+rpcgen:Generate RPC protocol code
+rpcinfo:Report RPC information
+rpm:Red Hat package manager
+rsh:Remote shell client
+rshd:Remote shell server
+rsync:Remote file and directory synchronization
+runlevel:Print previous and current system runlevel
+rup:Show host status of local machines
+ruptime:Show host status of local machines
+rusers:Who is logged in on local machines
+rusersd:Remote users server
+rwall:Send a message to users logged in on a host
+rwho:Show who is logged in on local machines
+rwhod:Remote who server
+sane-find-scanner:Find SCSI and USB scanners
+sar:Collect, report, or save system activity information
+scanadf:Scan using an automatic document feeder
+scanimage:Scan images and print them
+scp:Secure copy (remote file copy program)
+screen:Terminal multiplexer
+script:Make typescript of terminal session
+scriptreplay:Replay typescripts, using timing information
+sdiff:Compare two files side-by-side
+sed:Stream editor
+select:Conditionally execute commands in a loop
+sendmail:Send mail
+sensors:Print hardware sensor information
+seq:Print a sequence of numbers
+service:Run a System V init script
+set:Set or unset values of shell options and positional parameters
+setfdprm:Set floppy disk parameters
+setkeycodes:Load kernel scancode-to-keycode mapping table entries
+setleds:Set the keyboard LEDs
+setmetamode:Change the keyboard meta key handling
+setquota:Set disk quotas
+setsid:Run a program in a new session
+setterm:Set terminal attributes
+sftp:Secure File Transfer Protocol
+sh:Bourne shell
+sha1sum:Print or check SHA1 checksums
+shift:Shift positional parameters
+shopt:Set or unset values of shell options
+showkey:Examine the codes sent by the keyboard
+showmount:Show mount information for an NFS server
+shred:Overwrite a file to hide its contents
+shutdown:Bring the system down
+size:Print section sizes of object files
+skill:Send a signal to a process
+slabtop:Display kernel slab cache information in real time
+slattach:Attach a network interface to a serial line
+sleep:Delay for a specified time
+slocate:Find files by name
+snice:Alter scheduling priority of background jobs
+sort:Sort lines of text files
+source:Read and execute commands from a file
+split:Split a file into pieces
+ss:Utility to investigate sockets
+ssh:OpenSSH remote login client
+ssh-add:Add identity to the SSH authentication agent
+ssh-agent:SSH authentication agent
+ssh-keygen:Generate SSH public and private key pairs
+ssh-keyscan:Utility for gathering SSH public keys
+sshd:OpenSSH SSH daemon
+stat:Display file or file system status
+statd:NFS status monitor
+strace:Trace system calls and signals
+strfile:Create a random access file for storing strings
+strings:Print the strings of printable characters in files
+strip:Remove symbols from object files
+stty:Change and print terminal line settings
+su:Run a shell with substitute user and group IDs
+sudo:Execute a command as another user
+sum:Print checksum and block counts for files
+suspend:Suspend execution of this shell
+swapoff:Disable swapping on a device
+swapon:Enable swapping on a device
+symlink:Make a new name for a file
+sync:Synchronize cached writes to persistent storage
+sysctl:Configure kernel parameters at runtime
+sysklogd:System logging and kernel message trapping
+syslogd:System logging daemon
+systemctl:Control the systemd system and service manager
+tac:Concatenate and write files in reverse
+tail:Output the last part of files
+tailf:Follow the growth of a log file
+talk:Talk to another user
+talkd:Remote user communication server
+tar:Archiving utility
+taskset:Set or retrieve a process's CPU affinity
+tcpd:TCP wrapper
+tcpdump:Dump traffic on a network
+tcpslice:Extract pieces of and merge together tcpdump files
+tee:Read from standard input and write to standard output and files
+telinit:Change system runlevel
+telnet:User interface to the TELNET protocol
+telnetd:Telnet server
+test:Check file types and compare values
+tftp:Trivial File Transfer Protocol client
+tftpd:Trivial File Transfer Protocol server
+time:Measure program resource use
+timeout:Run a command with a time limit
+times:Print user and system times
+tload:Graphically display system load average
+tmpwatch:Remove files which haven't been accessed for a period of time
+top:Display Linux tasks
+touch:Change file timestamps
+tput:Initialize a terminal or query terminfo database
+tr:Translate or delete characters
+tracepath:Trace network path to a remote host
+traceroute:Print the route packets take to a network host
+trap:Trap signals and execute a command
+tree:List contents of directories in a tree-like format
+troff:Typesetting system
+TRUE:Return a successful exit status
+tset:Terminal initialization
+tsort:Topological sort
+tty:Print the file name of the```plaintext
+tty:Print the file name of the terminal connected to standard input
+tune2fs:Adjust tunable file system parameters on ext2/ext3/ext4 file systems
+tunelp:Set various parameters for the line printer
+type:Display information about command type
+ul:Do underlining
+ulimit:Set or report user resource limits
+umask:Set file mode creation mask
+umount:Unmount file systems
+unalias:Remove aliases
+uname:Print system information
+uncompress:Uncompress .Z files
+unexpand:Convert spaces to tabs
+unicode_start:Initialize Unicode mode for the console
+unicode_stop:Disable Unicode mode for the console
+uniq:Report or omit repeated lines
+units:Convert units from one scale to another
+unix2dos:Convert text file from Unix format to DOS format
+unrar:Extract RAR files
+unset:Unset values and attributes of shell variables and functions
+unshar:Unpack shell archive scripts
+until:Execute commands until a condition becomes true
+uptime:Tell how long the system has been running
+useradd:Add a new user
+userdel:Delete a user account
+usermod:Modify a user account
+username:Print the user name associated with the current effective user ID
+users:Print the user names of users currently logged in to the current host
+usleep:Sleep for microseconds
+uudecode:Decode a binary file
+uuencode:Encode a binary file
+uuidgen:Create a new UUID
+vdir:List directory contents
+vi:Text editor
+vidmode:Set video mode
+vim:Text editor with improved features
+vmstat:Report virtual memory statistics
+vnstat:Network traffic monitor
+volname:Print volume name of a storage device
+w:Show who is logged on and what they are doing
+wait:Wait for a process to change state
+wall:Send a message to all logged-in users
+warnquota:Send mail to users over quota
+watch:Execute a program periodically, showing output fullscreen
+wc:Print newline, word, and byte counts for each file
+wget:Non-interactive network downloader
+whatis:Display one-line manual page descriptions
+whereis:Locate the binary, source, and manual page files for a command
+which:Locate a command
+while:Execute commands as long as a condition is true
+who:Show who is logged on
+whoami:Print the effective user ID
+whois:Query a whois server
+write:Send a message to another user
+xargs:Build and execute command lines from standard input
+xdg-open:Open a file or URL in the user's preferred application
+xinetd:Extended Internet services daemon
+xz:Compress files with the XZ format
+yacc:Yet Another Compiler Compiler
+yes:Output a string repeatedly until killed
+ypbind:Binding program for NIS
+ypcat:Print values of all keys in a NIS database
+ypinit:Build and install a NIS database
+ypmatch:Print values of one or more keys in a NIS database
+yppasswd:Change NIS password
+yppasswdd:NIS password update daemon
+yppoll:Print the order number and master server of a NIS map
+yppush:Force propagation of changed NIS maps
+ypserv:NIS server
+ypset:Point a NIS client at a particular server
+yptest:Check NIS client functionality
+ypwhich:Print the NIS server or map master for a NIS map
+ypxfr:Transfer NIS map from a remote server to local host
+zcat:Compress or expand files
+zcmp:Compare compressed files
+zdiff:Compare compressed files
+zdump:Time zone dumper
+zforce:Force a .gz extension on all files
+zgrep:Search compressed files
+zic:Time zone compiler
+zip:Package and compress (archive) files
+zless:File pager
+zmore:File pager
+znew:Recompress .Z files to .gz format

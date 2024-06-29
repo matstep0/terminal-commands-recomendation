@@ -11,7 +11,7 @@ def load_dataset(file_path):
             commands_set[command] = description
     return commands_set
 
-def run_sanity_check(commands_set):
+def test_model(commands_set,top_n=3):
 
     from engines import TFIDFEngine
     tfidf_engine = TFIDFEngine(commands_set)
@@ -19,7 +19,7 @@ def run_sanity_check(commands_set):
 
     matches = 0
     for command, description in commands_set.items():
-        recommended_command_list = tfidf_engine.recommend_command(description, top_n=3)
+        recommended_command_list = tfidf_engine.recommend_command(description, top_n=top_n)
         if any(command == recommended_command[0] for recommended_command in recommended_command_list):
             matches += 1
         else:
@@ -29,6 +29,9 @@ def run_sanity_check(commands_set):
             print()
 
     print(f"Total commands: {len(commands_set)}, Matches: {matches}")
+    print(f"Top {top_n} accuracy: {matches / len(commands_set) * 100}%")
+
+   
 
 def get_user_query():
     query = input("Enter your command query: ")
@@ -36,15 +39,18 @@ def get_user_query():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI tool for command recommendation.")
-    parser.add_argument('--test', action='store_true', help='Run the sanity check tests')
-    parser.add_argument('--top', type=int, help='Number of top recommendations to display')
+    parser.add_argument('--test', action='store_true', help='Run the check tests')
+    parser.add_argument('--top', type=int, default=5, help='Number of top recommendations to display')
+    # Add an argument for specifying a filename with a default value
+    parser.add_argument('--filename', type=str, default='./commands_dataset.txt', help='Path to the dataset file')
     args = parser.parse_args()
 
-    dataset_path = './commands_dataset.txt'
+    # Use the filename specified by the user or the default value
+    dataset_path = args.filename
     commands_set = load_dataset(dataset_path)
 
     if args.test:
-        run_sanity_check(commands_set)
+        test_model(commands_set=commands_set, top_n=args.top)
     else:
         ic("Dataset loaded.")  # You can comment this line out for cleaner output
         
@@ -54,9 +60,7 @@ if __name__ == "__main__":
         tfidf_engine = TFIDFEngine(commands_set)
         tfidf_engine.fit()
         
-        top_n = 5  # Default value
-        if args.top:
-            top_n = args.top
+        top_n = args.top
         
         recommended_commands = tfidf_engine.recommend_command(query, top_n)
         
