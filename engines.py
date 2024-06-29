@@ -2,8 +2,6 @@ import math
 import re
 from abc import ABC, abstractmethod
 from collections import Counter
-import numpy as np
-import pandas as pd
 import nltk
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk.corpus import stopwords
@@ -112,23 +110,6 @@ class TFIDFEngine(Engine):
         # Sorting and returning the top n results in a pretty format
         sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_n]
         results = [(cmd, scr, self.commands_set[cmd]) for cmd, scr in sorted_scores]
-        return pd.DataFrame(results, columns=['Command', 'Score', 'Description']).to_string(index=False)
-
-if __name__ == "__main__":
-    dataset_path = './commands_dataset.txt'
+        ret = [(cmd, scr, self.commands_set[cmd]) for cmd, scr in sorted_scores]
+        return ret
     
-    def load_dataset(file_path):
-        commands_set = {}
-        with open(file_path, 'r') as file:
-            for line in file:
-                command, description = line.strip().split(':',1)
-                commands_set[command] = description
-        return commands_set
-    
-    commands_set = load_dataset(dataset_path)
-    tfidf_engine = TFIDFEngine(commands_set, use_lemmatization=False, use_stemming=False)
-    tfidf_engine.fit()
-    
-    #query = input("Enter your command query: ")
-    query = "Update generated configuration files"
-    print(tfidf_engine.recommend_command(query, top_n=5))
