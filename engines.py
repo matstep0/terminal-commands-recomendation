@@ -6,6 +6,9 @@ import nltk
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk.corpus import stopwords
 from icecream import ic # For debugging
+from scipy.special import kl_div
+from scipy.stats import pearsonr
+
 
 # Suppressing the verbose output of nltk downloader
 try:
@@ -100,6 +103,30 @@ class TFIDFEngine(Engine):
 
         return dot_product / (query_norm * vector_norm)
 
+    def _kl_divergence(self, query_terms, tf_idf_vector):
+        query_tf = Counter(query_terms)
+        query_tf_idf = {term: (1 + math.log(freq)) * self.idf.get(term, 0) for term, freq in query_tf.items()}
+
+        # Ensure both vectors have the same keys
+        all_terms = set(query_tf_idf.keys()).union(set(tf_idf_vector.keys()))
+        p = [query_tf_idf.get(term, 0) for term in all_terms]
+        q = [tf_idf_vector.get(term, 0) for term in all_terms]
+        
+        return -sum(kl_div(p, q)) # Minus is needed here
+
+    def _pearson_correlation(self, query_terms, tf_idf_vector):
+        query_tf = Counter(query_terms)
+        query_tf_idf = {term: (1 + math.log(freq)) * self.idf.get(term, 0) for term, freq in query_tf.items()}
+
+        all_terms = set(query_tf_idf.keys()).union(set(tf_idf_vector.keys()))
+        p = [query_tf_idf.get(term, 0) for term in all_terms]
+        q = [tf_idf_vector.get(term, 0) for term in all_terms]
+
+        if len(p) < 2 or len(q) < 2:
+            return 0.0
+
+        correlation, _ = pearsonr(p, q)
+        return correlation
     # Add more scoring methods here as needed
     def calculate_scores(self, query_terms, metric='sum'):
         scores = {}
@@ -108,6 +135,24 @@ class TFIDFEngine(Engine):
                 score = self._score_sum(query_terms, tf_idf_vector)
             elif metric == 'cosine':
                 score = self._cosine_similarity(query_terms, tf_idf_vector)
+            elif metric == 'kl_divergence':
+                score = -self._kl_divergence(query_terms, tf_idf_vector)  # Minimizing KL divergence
+            elif metric == 'pearson':
+                score = self._pearson_correlation(query_terms, tf_idf_vector)
+            scores[command] = score
+
+        return scores
+    def calculate_scores(self, query_terms, metric='sum'):
+        metric_functions = {
+            'sum': self._score_sum,
+            'cosine': self._cosine_similarity,
+            'kl_divergence': self._kl_divergence,
+            'pearson': self._pearson_correlation
+        }
+
+        scores = {}
+        for command, tf_idf_vector in self.tf_idf_matrix.items():
+            score = metric_functions[metric](query_terms, tf_idf_vector)
             scores[command] = score
 
         return scores
