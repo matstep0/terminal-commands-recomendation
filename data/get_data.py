@@ -32,6 +32,10 @@ for table in tables:
                 break_loop=True
                 break
 # Optionally, write the commands to a file
-with open('/home/aimaster/Desktop/STUDIA/NLP/Project/commands-desription.txt', 'w') as file:
+with open('/home/aimaster/Desktop/STUDIA/NLP/Project/commands_desription.txt', 'w') as file:
     for command, description in commands:
         file.write(f'{command}:{description}\n')
+
+print(commands)
+command_set = {command for command, _ in commands}
+print(command_set)

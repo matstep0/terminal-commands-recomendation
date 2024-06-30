@@ -1,3 +1,4 @@
+#Commands scraped from url = 'https://github.com/trinib/Linux-Bash-Commands/blob/main/README.md'
 accept:Accept or Reject jobs to a destination, such as a printer.
 access:Check a user’s RWX(read, write and execute) permission for a file.
 accton:Used to turn on or turn off the process for accounting or change info process accounting file.

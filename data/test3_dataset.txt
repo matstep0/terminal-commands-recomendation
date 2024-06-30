@@ -1,0 +1,101 @@
+#100 commands with gpt4o
+ls: List files in a directory.
+pwd: Show current directory path.
+cd: Change directory.
+cp: Copy files or directories.
+mv: Move or rename files or directories.
+rm: Remove files or directories.
+mkdir: Create a new directory.
+rmdir: Remove an empty directory.
+touch: Create an empty file or update a file's timestamp.
+cat: Concatenate and display file content.
+less: View file content page by page.
+head: Display the first few lines of a file.
+tail: Display the last few lines of a file.
+grep: Search for patterns in files.
+find: Search for files in a directory hierarchy.
+chmod: Change file permissions.
+chown: Change file owner and group.
+ln: Create hard and symbolic links.
+df: Display disk space usage.
+du: Display directory space usage.
+ps: Display currently running processes.
+kill: Terminate a process.
+top: Display real-time system statistics.
+nano: Simple text editor.
+vim: Advanced text editor.
+emacs: Highly extensible text editor.
+wget: Download files from the web.
+curl: Transfer data from or to a server.
+ssh: Securely connect to remote machines.
+scp: Securely copy files between hosts.
+rsync: Sync files and directories.
+tar: Archive files.
+gzip: Compress files.
+gunzip: Decompress files.
+zip: Create ZIP archive files.
+unzip: Extract ZIP archive files.
+date: Display or set the system date and time.
+uptime: Show how long the system has been running.
+whoami: Display the current user.
+man: Display manual pages for commands.
+alias: Create command shortcuts.
+unalias: Remove command shortcuts.
+history: Show command history.
+sudo: Execute a command as another user.
+env: Display environment variables.
+export: Set environment variables.
+source: Execute commands from a file in the current shell.
+echo: Display a line of text.
+exit: Exit the shell.
+reboot: Reboot the system.
+shutdown: Shut down the system.
+ping: Check network connectivity.
+traceroute: Trace the route packets take to a network host.
+nslookup: Query Internet name servers interactively.
+dig: DNS lookup.
+hostname: Show or set the system’s hostname.
+ifconfig: Configure a network interface.
+netstat: Network statistics.
+ip: Show/manipulate routing, devices, and tunnels.
+route: Show/manipulate the IP routing table.
+ss: Another utility to investigate sockets.
+iptables: Administration tool for IPv4 packet filtering and NAT.
+firewall-cmd: Firewall management tool.
+systemctl: Control the systemd system and service manager.
+journalctl: Query the systemd journal.
+dmesg: Print or control the kernel ring buffer.
+lsblk: List information about block devices.
+blkid: Locate/print block device attributes.
+mount: Mount a filesystem.
+umount: Unmount a filesystem.
+fdisk: Partition table manipulator for Linux.
+mkfs: Build a Linux filesystem.
+fsck: File system consistency check and repair.
+parted: A partition manipulation program.
+df: Report file system disk space usage.
+du: Estimate file space usage.
+lsusb: List USB devices.
+lspci: List all PCI devices.
+uname: Print system information.
+uptime: Tell how long the system has been running.
+free: Display amount of free and used memory.
+vmstat: Report virtual memory statistics.
+iostat: Report CPU and I/O statistics.
+mpstat: Report processors related statistics.
+sar: Collect, report, or save system activity information.
+lsof: List open files.
+strace: Trace system calls and signals.
+tcpdump: Dump traffic on a network.
+nc: Netcat, a versatile networking tool.
+htop: Interactive process viewer.
+glances: System monitoring tool.
+bc: An arbitrary precision calculator language.
+expr: Evaluate expressions.
+awk: Pattern scanning and processing language.
+sed: Stream editor for filtering and transforming text.
+cut: Remove sections from each line of files.
+sort: Sort lines of text files.
+uniq: Report or omit repeated lines.
+diff: Compare files line by line.
+patch: Apply a patch to a file.

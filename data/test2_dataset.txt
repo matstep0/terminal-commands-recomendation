@@ -1,0 +1,51 @@
+# Random 50 commands by chatgpt-4o.
+ls: List files in a directory.
+pwd: Show current directory path.
+cd: Change directory.
+cp: Copy files or directories.
+mv: Move or rename files or directories.
+rm: Remove files or directories.
+mkdir: Create a new directory.
+rmdir: Remove an empty directory.
+touch: Create an empty file or update a file's timestamp.
+cat: Concatenate and display file content.
+less: View file content page by page.
+head: Display the first few lines of a file.
+tail: Display the last few lines of a file.
+grep: Search for patterns in files.
+find: Search for files in a directory hierarchy.
+chmod: Change file permissions.
+chown: Change file owner and group.
+ln: Create hard and symbolic links.
+df: Display disk space usage.
+du: Display directory space usage.
+ps: Display currently running processes.
+kill: Terminate a process.
+top: Display real-time system statistics.
+nano: Simple text editor.
+vim: Advanced text editor.
+emacs: Highly extensible text editor.
+wget: Download files from the web.
+curl: Transfer data from or to a server.
+ssh: Securely connect to remote machines.
+scp: Securely copy files between hosts.
+rsync: Sync files and directories.
+tar: Archive files.
+gzip: Compress files.
+gunzip: Decompress files.
+zip: Create ZIP archive files.
+unzip: Extract ZIP archive files.
+date: Display or set the system date and time.
+uptime: Show how long the system has been running.
+whoami: Display the current user.
+man: Display manual pages for commands.
+alias: Create command shortcuts.
+unalias: Remove command shortcuts.
+history: Show command history.
+sudo: Execute a command as another user.
+env: Display environment variables.
+export: Set environment variables.
+source: Execute commands from a file in the current shell.
+echo: Display a line of text.
+exit: Exit the shell.
+reboot: Reboot the system.

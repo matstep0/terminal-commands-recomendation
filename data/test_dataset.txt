@@ -1,3 +1,4 @@
+#Synthetic dataset generated for list of commands from training set.
 accept:Accept a job to print
 access:Check access to files
 accton:Turn accounting on

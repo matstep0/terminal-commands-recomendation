@@ -40,7 +40,7 @@ class Engine(ABC):
 
         if self.use_lemmatization:
             tokens = [self.lemmatizer.lemmatize(token) for token in tokens]
-        elif self.use_stemming:
+        if self.use_stemming:
             tokens = [self.stemmer.stem(token) for token in tokens]
 
         return tokens
