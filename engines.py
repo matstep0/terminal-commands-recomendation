@@ -1,5 +1,6 @@
 import math
 import re
+import numpy as np
 from abc import ABC, abstractmethod
 from collections import Counter
 import nltk
@@ -146,15 +147,44 @@ class TFIDFEngine(Engine):
 
         correlation, _ = pearsonr(p, q)
         return correlation
-    # Add more scoring methods here as needed
+
+
+    def _score_jsd(self, query_terms, tf_idf_vector, epsilon=1e-10):
+        def jensen_shannon_divergence(P, Q):
+            M = 0.5 * (P + Q)
+            return 0.5 * (np.sum(rel_entr(P, M)) + np.sum(rel_entr(Q, M)))
+        
+        query_tf = Counter(query_terms)
+        query_tf_idf = {term: (1 + math.log(query_tf[term])) * self.idf.get(term, 0) for term in query_terms}
+        
+        # Normalize the query TF-IDF vector to get probabilities
+        query_total = sum(query_tf_idf.values())
+        if query_total == 0:
+            return float('inf')  # Return infinity if the query TF-IDF sum is zero
+        query_prob = {term: tfidf / query_total for term, tfidf in query_tf_idf.items()}
+        
+        # Normalize the document TF-IDF vector to get probabilities
+        doc_total = sum(tf_idf_vector.values())
+        doc_prob = {term: tfidf / doc_total for term, tfidf in tf_idf_vector.items()}
+
+        # Align the two probability vectors by their terms (union of terms)
+        all_terms = set(query_prob.keys()).union(doc_prob.keys())
+        query_prob_aligned = np.array([query_prob.get(term, 0) + epsilon for term in all_terms])
+        doc_prob_aligned = np.array([doc_prob.get(term, 0) + epsilon for term in all_terms])
+
+        # Compute Jensen-Shannon Divergence
+        js_divergence = jensen_shannon_divergence(query_prob_aligned, doc_prob_aligned)
+        return -js_divergence
+
 
     def calculate_scores(self, query_terms, metric='sum'):
         metric_functions = {
             'sum': self._score_sum,
             'cosine': self._cosine_similarity,
-            'kl_divergence': self._kl_divergence,
+            'kld': self._kl_divergence,
             'pearson': self._pearson_correlation,
             'pearson_intersection': self._score_pearson_intersection,
+            'jsd': self._score_jsd
         }
 
         scores = {}
