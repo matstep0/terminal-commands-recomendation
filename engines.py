@@ -86,9 +86,19 @@ class TFIDFEngine(Engine):
         intersection = set(query_terms).intersection(set(tf_idf_vector.keys()))
         #ic(intersection)
         return sum((1 + math.log(query_tf[term])) * tf_idf_vector[term] for term in intersection)
-
-
     
+    def _cosine_similarity(self, query_terms, tf_idf_vector):
+        query_tf = Counter(query_terms)
+        query_tf_idf = {term: (1 + math.log(freq)) * self.idf.get(term, 0) for term, freq in query_tf.items()}
+
+        dot_product = sum(query_tf_idf[term] * tf_idf_vector.get(term, 0) for term in query_tf_idf)
+        query_norm = math.sqrt(sum(value ** 2 for value in query_tf_idf.values()))
+        vector_norm = math.sqrt(sum(value ** 2 for value in tf_idf_vector.values()))
+
+        if not query_norm or not vector_norm:
+            return 0.0
+
+        return dot_product / (query_norm * vector_norm)
 
     # Add more scoring methods here as needed
     def calculate_scores(self, query_terms, metric='sum'):
@@ -96,7 +106,8 @@ class TFIDFEngine(Engine):
         for command, tf_idf_vector in self.tf_idf_matrix.items():
             if metric == 'sum':
                 score = self._score_sum(query_terms, tf_idf_vector)
-            # Add more metrics here and their corresponding method calls
+            elif metric == 'cosine':
+                score = self._cosine_similarity(query_terms, tf_idf_vector)
             scores[command] = score
 
         return scores
