@@ -128,20 +128,7 @@ class TFIDFEngine(Engine):
         correlation, _ = pearsonr(p, q)
         return correlation
     # Add more scoring methods here as needed
-    def calculate_scores(self, query_terms, metric='sum'):
-        scores = {}
-        for command, tf_idf_vector in self.tf_idf_matrix.items():
-            if metric == 'sum':
-                score = self._score_sum(query_terms, tf_idf_vector)
-            elif metric == 'cosine':
-                score = self._cosine_similarity(query_terms, tf_idf_vector)
-            elif metric == 'kl_divergence':
-                score = -self._kl_divergence(query_terms, tf_idf_vector)  # Minimizing KL divergence
-            elif metric == 'pearson':
-                score = self._pearson_correlation(query_terms, tf_idf_vector)
-            scores[command] = score
-
-        return scores
+    
     def calculate_scores(self, query_terms, metric='sum'):
         metric_functions = {
             'sum': self._score_sum,
