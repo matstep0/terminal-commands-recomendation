@@ -2,6 +2,7 @@ import os
 import argparse
 from icecream import ic # For debugging 
 from engines import TFIDFEngine
+from engines import TFIDFEngine
 
 def load_dataset(file_path):
     commands_set = {}
@@ -15,23 +16,27 @@ def load_dataset(file_path):
 
 def test_model(training_set, test_set ,top_n=3, use_leammatization=False, use_stemming=False, metric='sum'):
 
-    from engines import TFIDFEngine
     tfidf_engine = TFIDFEngine(training_set, use_lemmatization=use_leammatization, use_stemming=use_stemming)
     tfidf_engine.fit()
 
     matches = 0
-    for command, description in test_set.items():
+    total_commands = len(test_set)
+    for i, (command, description) in enumerate(test_set.items()):
         recommended_command_list = tfidf_engine.recommend_command(description, top_n=top_n, metric=metric)
         if any(command == recommended_command[0] for recommended_command in recommended_command_list):
             matches += 1
         else:
-            print(f"Mismatch: {command} recommended as {recommended_command_list[0][0]}")
+            continue
+            """print(f"Mismatch: {command} recommended as {recommended_command_list[0][0]}")
             print(f"Description: {command},{test_set[command]}")
             print(f"Desription of recommended: {recommended_command_list[0][0]},{training_set[recommended_command_list[0][0]]}")
-            print()
+            print()"""
 
-    print(f"Total commands: {len(test_set)}, Matches: {matches}")
-    print(f"Top {top_n} accuracy: {matches / len(test_set) * 100}%")
+        progress = (i + 1) / total_commands * 100
+        print(f"\rProgress: {progress:.2f}%", end='')
+    print()
+    print(f"Total commands: {total_commands}, Matches: {matches}")
+    print(f"Top {top_n} accuracy: {matches / total_commands * 100}%")
 
    
 

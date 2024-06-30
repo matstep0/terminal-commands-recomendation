@@ -6,7 +6,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 from nltk.corpus import stopwords
 from icecream import ic # For debugging
-from scipy.special import kl_div
+from scipy.special import kl_div, rel_entr
 from scipy.stats import pearsonr
 
 
@@ -112,7 +112,26 @@ class TFIDFEngine(Engine):
         p = [query_tf_idf.get(term, 0) for term in all_terms]
         q = [tf_idf_vector.get(term, 0) for term in all_terms]
         
-        return -sum(kl_div(p, q)) # Minus is needed here
+        return -sum(rel_entr(p, q)) # Minus is needed here
+
+    from scipy.stats import pearsonr
+
+    def _score_pearson_intersection(self, query_terms, tf_idf_vector):
+        #This is special modification of pearson correlation, which takes into account only the intersection of terms. (Faster but with less accuracy)
+
+        query_tf = Counter(query_terms)
+        query_tf_idf = {term: (1 + math.log(query_tf[term])) * self.idf.get(term, 0) for term in query_terms}
+        
+        # Intersection of terms
+        common_terms = set(query_tf_idf.keys()).intersection(tf_idf_vector.keys())
+        if len(common_terms) < 2:  # Pearson wymaga co najmniej dwóch wartości
+            return 0.0
+        
+        query_vector = [query_tf_idf[term] for term in common_terms]
+        doc_vector = [tf_idf_vector[term] for term in common_terms]
+        
+        return pearsonr(query_vector, doc_vector)[0]  # Zwraca współczynnik korelacji Pearsona
+
 
     def _pearson_correlation(self, query_terms, tf_idf_vector):
         query_tf = Counter(query_terms)
@@ -128,13 +147,14 @@ class TFIDFEngine(Engine):
         correlation, _ = pearsonr(p, q)
         return correlation
     # Add more scoring methods here as needed
-    
+
     def calculate_scores(self, query_terms, metric='sum'):
         metric_functions = {
             'sum': self._score_sum,
             'cosine': self._cosine_similarity,
             'kl_divergence': self._kl_divergence,
-            'pearson': self._pearson_correlation
+            'pearson': self._pearson_correlation,
+            'pearson_intersection': self._score_pearson_intersection,
         }
 
         scores = {}
