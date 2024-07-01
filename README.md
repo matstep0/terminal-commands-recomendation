@@ -3,8 +3,8 @@
 ## Instalation
 Clone the repository to your local machine and navigate into the project directory.
 ```sh
-git clone https://github.com/yourusername/command-recommendation-system.git
-cd command-recommendation-system
+git clone https://github.com/matstep0/terminal-commands-recomendation.git
+cd terminal-commands-recomendation
 ```
 Create a virtual environment 
 ```sh

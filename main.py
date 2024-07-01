@@ -1,6 +1,7 @@
 import os
 import argparse
 from icecream import ic # For debugging 
+ic.disable()
 from engines import TFIDFEngine
 
 def load_dataset(file_path):
