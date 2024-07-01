@@ -2,7 +2,6 @@ import os
 import argparse
 from icecream import ic # For debugging 
 from engines import TFIDFEngine
-from engines import TFIDFEngine
 
 def load_dataset(file_path):
     commands_set = {}
@@ -14,9 +13,9 @@ def load_dataset(file_path):
             commands_set[command] = description
     return commands_set
 
-def test_model(training_set, test_set ,top_n=3, use_leammatization=False, use_stemming=False, metric='sum', suppress_output=False):
+def test_model(training_set, test_set ,top_n=3, use_lemmatization=False, use_stemming=False, metric='sum', suppress_output=False):
 
-    tfidf_engine = TFIDFEngine(training_set, use_lemmatization=use_leammatization, use_stemming=use_stemming)
+    tfidf_engine = TFIDFEngine(training_set, use_lemmatization=use_lemmatization, use_stemming=use_stemming)
     tfidf_engine.fit()
 
     matches = 0
@@ -53,7 +52,7 @@ if __name__ == "__main__":
     # Add an argument for specifying a filename with a default value
     parser.add_argument('--train_filename', type=str, default='./data/commands_dataset.txt', help='Path to the dataset file')
     parser.add_argument('--test_filename', type=str, default='./data/commands_dataset.txt', help='Path to the test dataset file')
-    parser.add_argument('--query', type=str, help='Query to recommend commands')
+    parser.add_argument('--query', type=str, help='Query to recommend commands, instead of user input')
     parser.add_argument('--use_lemmatization', action='store_true', help='Use lemmatization')
     parser.add_argument('--use_stemming', action='store_true', help='Use stemming')
     parser.add_argument('--metric', type=str, default='sum', help='Metric to use for ranking commands, avaible are: sum, cosine, kld, pearson, pearson_intersection, jsd')
@@ -67,7 +66,7 @@ if __name__ == "__main__":
         acc=test_model(training_set=training_set,
                     test_set=test_set,
                     top_n=args.top, 
-                    use_leammatization=args.use_lemmatization, 
+                    use_lemmatization=args.use_lemmatization, 
                     use_stemming=args.use_stemming, 
                     metric=args.metric,
                     suppress_output=False)
